@@ -1,0 +1,349 @@
+/* Screen Sizes */
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Variables */
+:root {
+  /* Fonts */
+  --Barlow: "Barlow", sans-serif;
+  --Barlow-Condensed: "Barlow Condensed", sans-serif;
+  --Bellefair: "Bellefair", serif;
+  /* Colors */
+  --paragraph: #e6e6fa;
+  --light: #ffffff;
+  --shadow: rgb(255, 255, 255) 0px 0px 15px 0px;
+  --navBar-color: #806d6d;
+  --span: #705959;
+}
+/* Skeleton */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--Barlow-Condensed);
+  background-image: url(../img/home/background-home-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.swiper-wrapper {
+  cursor: grab;
+}
+/* Start Home Page > Navbar */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav .icon-menu {
+  display: none;
+}
+.nav > div,
+.nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+
+.nav > div {
+  position: relative;
+  width: 50%;
+}
+
+.nav > ul {
+  gap: 20px;
+  background-color: rgba(128, 109, 109, 0.254);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: 65%;
+}
+.nav > ul .close {
+  display: none;
+}
+.nav > ul li a {
+  display: block;
+  text-transform: uppercase;
+  padding: 30px 0;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 1vw;
+  letter-spacing: 3px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav > ul li a span {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.nav > ul li a.active {
+  border-color: var(--light);
+}
+
+.nav > ul li a:hover {
+  border-color: var(--light);
+}
+
+.nav > div img {
+  width: 5%;
+}
+
+.nav > div hr {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 2px;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid rgba(141, 123, 123, 0.494);
+  z-index: 4;
+}
+/* End Home Page > Navbar */
+/* Start Main Home */
+.main-home,
+.main-home .left,
+.main-home .right {
+  color: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.main-home .left,
+.main-home .right {
+  min-height: 80vh;
+  width: 50%;
+}
+.main-home .left {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+.main-home .left div {
+  width: 50%;
+}
+.main-home .left div h1 {
+  font-family: var(--Barlow-Condensed);
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.main-home .left div h1 span {
+  display: block;
+  font-family: var(--Bellefair);
+  font-size: clamp(1.5rem, 6vw, 6rem);
+}
+.main-home .left div p {
+  color: var(--paragraph);
+  line-height: 2;
+  margin-bottom: 25%;
+  margin-top: 20px;
+}
+.main-home .right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20%;
+  width: 17vw;
+  height: 17vw;
+  background-color: var(--light);
+  padding: 2em;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.main-home .right a span {
+  font-family: var(--Bellefair);
+  font-size: 1.7vw;
+  color: black;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-home .right a:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
+/* End Main Home */
+/* Responsive */
+@media (max-width: 992px) {
+  body {
+    background-image: url(../img/home/background-home-tablet.jpg);
+  }
+  hr {
+    display: none;
+  }
+  .nav > div img {
+    width: 10%;
+  }
+  .main-home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .main-home .left,
+  .main-home .right {
+    min-height: initial;
+    width: 100%;
+    padding: 10px;
+  }
+  .main-home .left div {
+    width: 100%;
+  }
+  .main-home .left div h1 span {
+    font-size: 18vw;
+  }
+  .main-home .left {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .main-home .right a {
+    position: inherit;
+    width: 30vw;
+    height: 30vw;
+  }
+  .main-home .right a span {
+    font-size: 2.5vw;
+  }
+  .main-home .left div p {
+    margin-bottom: 5%;
+  }
+  .nav > ul li a {
+    font-size: 1.5vw;
+  }
+}
+
+/* Menu */
+@media (max-width: 576px) {
+  .nav ul {
+    display: none;
+  }
+  .nav .icon-menu {
+    display: block;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .nav > div {
+    padding: 0;
+    margin-top: 30px;
+  }
+  .nav > div img {
+    width: 17%;
+  }
+  .main-home .left div p {
+    margin-bottom: 20%;
+  }
+  /* Start Menu Mobile */
+  .nav > ul {
+    display: block;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 99;
+    margin: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .nav > ul li a {
+    border: none;
+    font-size: 5vw;
+    letter-spacing: 1px;
+    padding: 10px 0;
+  }
+  .nav > ul .close {
+    display: block;
+    position: relative;
+    padding-bottom: 3em;
+    padding-top: 3em;
+  }
+  .nav > ul .close img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  .open-close {
+    right: 0 !important;
+  }
+}
+/* End Main Page */
